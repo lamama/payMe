@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 08, 2018 at 08:20 AM
+-- Generation Time: Mar 08, 2018 at 09:25 AM
 -- Server version: 10.1.30-MariaDB
 -- PHP Version: 7.2.2
 
@@ -59,16 +59,20 @@ CREATE TABLE `sales` (
   `price` int(11) NOT NULL,
   `transaction_id` int(11) NOT NULL,
   `currency` varchar(3) NOT NULL,
-  `dateTime` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
+  `dateTime` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `description` varchar(500) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `sales`
 --
 
-INSERT INTO `sales` (`id`, `status_code`, `sale_url`, `seller_payme_id`, `payme_sale_code`, `price`, `transaction_id`, `currency`, `dateTime`) VALUES
-(1, 0, 'https://preprod.paymeservice.com/sale/generate/SALE1520-493558CZ-SJXQ07IM-TOA3WJ5L', 'SALE1520-493558CZ-SJXQ07IM-TOA3WJ5L', 189123, 34543, 0, 'ILS', '2018-03-08 07:19:18'),
-(2, 0, 'https://preprod.paymeservice.com/sale/generate/SALE1520-493618LR-MHBR3OKG-7FWGKLSJ', 'SALE1520-493618LR-MHBR3OKG-7FWGKLSJ', 189124, 34543, 0, 'ILS', '2018-03-08 07:20:17');
+INSERT INTO `sales` (`id`, `status_code`, `sale_url`, `seller_payme_id`, `payme_sale_code`, `price`, `transaction_id`, `currency`, `dateTime`, `description`) VALUES
+(1, 0, 'https://preprod.paymeservice.com/sale/generate/SALE1520-493558CZ-SJXQ07IM-TOA3WJ5L', 'SALE1520-493558CZ-SJXQ07IM-TOA3WJ5L', 189123, 34543, 0, 'ILS', '2018-03-08 07:19:18', ''),
+(2, 0, 'https://preprod.paymeservice.com/sale/generate/SALE1520-493618LR-MHBR3OKG-7FWGKLSJ', 'SALE1520-493618LR-MHBR3OKG-7FWGKLSJ', 189124, 34543, 0, 'ILS', '2018-03-08 07:20:17', ''),
+(3, 0, 'https://preprod.paymeservice.com/sale/generate/SALE1520-497364RA-LZQQOAXT-S9QDFOPW', 'SALE1520-497364RA-LZQQOAXT-S9QDFOPW', 189126, 3545, 0, 'ILS', '2018-03-08 08:22:44', 'fffffffff'),
+(4, 0, 'https://preprod.paymeservice.com/sale/generate/SALE1520-497439HE-X3KWKCBL-ZSZMV7M1', 'SALE1520-497439HE-X3KWKCBL-ZSZMV7M1', 189127, 34554, 0, 'ILS', '2018-03-08 08:23:59', 'dfgdfgdfg dfgf'),
+(5, 0, 'https://preprod.paymeservice.com/sale/generate/SALE1520-497527DT-U1PM8J0J-HSL9X0ZP', 'SALE1520-497527DT-U1PM8J0J-HSL9X0ZP', 189128, 435345, 0, 'ILS', '2018-03-08 08:25:27', 'dfgdfg');
 
 --
 -- Indexes for dumped tables
@@ -100,7 +104,7 @@ ALTER TABLE `currency`
 -- AUTO_INCREMENT for table `sales`
 --
 ALTER TABLE `sales`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

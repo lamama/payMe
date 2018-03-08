@@ -67,10 +67,6 @@
 			</select>
 		</p>
 		<p>
-			<label for="title">product_name</label>
-			<input type="text" class="" id="product_name" name="product_name" placeholder="" value="">
-		</p>
-		<p>
 			<label for="title">installments</label>
 			<input type="text" class="" id="installments" name="installments" placeholder="" value="<?=$installments?>"
 				   readonly>
@@ -90,7 +86,7 @@
 </div>
 
 <div class="right">
-	<iframe name="iframe">
+	<iframe name="iframe" src="submitSale">
 		<p>Your browser does not support iframe</p>
 	</iframe>
 </div>
